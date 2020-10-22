@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../ft_printf/ft_printf.h
+libft/libft.h
+../ft_printf/libft/libft.h
+stdarg.h
+-
+stdint.h
+-
+
+../ft_printf/libft/libft.h
+stdlib.h
+-
+unistd.h
+-
+
+../includes/corewar.h
+libft.h
+../includes/libft.h
+ft_printf.h
+../includes/ft_printf.h
+op.h
+../includes/op.h
+
+../includes/op.h
+
+/Users/lmittie/Desktop/corewar/srcs/main.c
+corewar.h
+/Users/lmittie/Desktop/corewar/srcs/corewar.h
+stdio.h
+-
+

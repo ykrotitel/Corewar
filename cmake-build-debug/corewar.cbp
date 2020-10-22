@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="corewar"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/lmittie/Desktop/corewar/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/lmittie/Desktop/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/lmittie/Desktop/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/lmittie/Desktop/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/lmittie/Desktop/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/lmittie/Desktop/corewar/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/lmittie/Desktop/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/lmittie/Desktop/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/lmittie/Desktop/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/lmittie/Desktop/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/lmittie/Desktop/corewar/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/lmittie/Desktop/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/lmittie/Desktop/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/lmittie/Desktop/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/lmittie/Desktop/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="corewar">
+				<Option output="/Users/lmittie/Desktop/corewar/cmake-build-debug/corewar" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lmittie/Desktop/corewar/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/lmittie/Desktop/corewar/ft_printf"/>
+					<Add directory="/Users/lmittie/Desktop/corewar/ft_printf/libft"/>
+					<Add directory="/Users/lmittie/Desktop/corewar/includes"/>
+					<Add directory="/Users/lmittie/Desktop/corewar/srcs"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/lmittie/Desktop/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 corewar"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/lmittie/Desktop/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/lmittie/Desktop/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/lmittie/Desktop/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="corewar/fast">
+				<Option output="/Users/lmittie/Desktop/corewar/cmake-build-debug/corewar" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lmittie/Desktop/corewar/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/lmittie/Desktop/corewar/ft_printf"/>
+					<Add directory="/Users/lmittie/Desktop/corewar/ft_printf/libft"/>
+					<Add directory="/Users/lmittie/Desktop/corewar/includes"/>
+					<Add directory="/Users/lmittie/Desktop/corewar/srcs"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/lmittie/Desktop/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 corewar/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/lmittie/Desktop/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/lmittie/Desktop/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/lmittie/Desktop/corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/bonuses.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/buffer_mgmt.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/fill_float_arrays.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/fill_ldbl_arrays.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/fill_options.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/ft_printf.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/ft_printf.h">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/ftoa.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/ftoa_base_buff.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/get_integer.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/get_specifiers.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/get_unsigned.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/handle_bighex.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/handle_csp.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/handle_floats.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/handle_hexdecimals.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/handle_integers.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/handle_octals.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/handle_overflow_buffer.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/handle_strings.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/handle_ubighex.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/handle_unsigned.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/handle_uoctal.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/hanlde_uhex.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/itoa_base_buff.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/itoa_base_buff_u.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/itoa_base_extra_funcs.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_atoi.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_bzero.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_isalnum.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_isalpha.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_isascii.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_isdigit.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_isprint.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_isspace.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_itoa.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_itoa_base.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_lstadd.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_lstat.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_lstdel.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_lstdelone.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_lstiter.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_lstmap.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_lstnew.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_lstreverse.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_lstsize.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_memalloc.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_memccpy.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_memchr.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_memcmp.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_memcpy.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_memdel.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_memmove.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_memset.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_numlen.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_putchar.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_putchar_fd.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_putendl.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_putendl_fd.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_putnbr.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_putnbr_fd.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_putstr.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_putstr_fd.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_sort_int_tab.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_str_is_printable.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strcapitalize.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strcat.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strchr.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strclr.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strcmp.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strcpy.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strdel.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strdup.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strequ.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_striter.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_striteri.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strjoin.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strlcat.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strlen.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strmap.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strmapi.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strncat.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strncmp.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strncpy.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strnequ.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strnew.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strnstr.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strrchr.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strsplit.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strstr.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strsub.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_strtrim.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_tolower.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/ft_toupper.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/libft/libft.h">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/long_arithmetics.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/printing_floats.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/ft_printf/utoa_base_buff_ox.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/includes/corewar.h">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/includes/op.h">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/main.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/op.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/parse_arguments.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/parse_champions.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
