@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmittie <lmittie@student.42.fr>            +#+  +:+       +#+        */
+/*   By: acarlett <acarlett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/19 20:52:05 by lmittie           #+#    #+#             */
-/*   Updated: 2020/10/22 18:04:41 by lmittie          ###   ########.fr       */
+/*   Updated: 2020/10/24 17:45:32 by acarlett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,12 @@ int 	main(int ac, char **av)
 
 	if (ac == 1)
 		print_usage();
-	else
-	{
+	visual(&data);
+	return (0);
+	// else
+	// {
 		init(&data);
 		parse_arguments(ac, (const char**)av, &data);
-	}
+	// }
 	return (0);
 }

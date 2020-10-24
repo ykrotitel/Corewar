@@ -3,20 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   corewar.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmittie <lmittie@student.42.fr>            +#+  +:+       +#+        */
+/*   By: acarlett <acarlett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/19 20:53:44 by lmittie           #+#    #+#             */
-/*   Updated: 2020/10/22 16:34:55 by lmittie          ###   ########.fr       */
+/*   Updated: 2020/10/24 17:47:24 by acarlett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef COREWAR_H
-
 # define COREWAR_H
 
-# include "libft.h"
-# include "ft_printf.h"
 # include "op.h"
+# include "../ft_printf/includes/libftprintf.h"
 # include <libc.h>
 
 typedef struct		s_champ
@@ -60,5 +58,6 @@ typedef struct		s_data
 
 void	parse_arguments(int ac, const char **av, t_data *data);
 void	parse_champions(t_args (*champs)[MAX_PLAYERS], t_data *data, const char **av);
+void		visual(t_data *data);
 
 #endif
