@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_champions.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmittie <lmittie@student.42.fr>            +#+  +:+       +#+        */
+/*   By: acarlett <acarlett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 18:06:12 by lmittie           #+#    #+#             */
-/*   Updated: 2020/10/22 20:48:18 by lmittie          ###   ########.fr       */
+/*   Updated: 2020/10/25 20:22:49 by acarlett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,10 +111,10 @@ void	parse_exec_code(t_data *data, int fd, uint8_t uid)
 		data->arena[i++] = byte;
 	}
 	i = 0;
-	while (data->champs->header.prog_size--)
-	{
-		printf("%02x ", data->arena[i++]);
-	}
+	// while (data->champs->header.prog_size--)
+	// {
+	// 	printf("%02x ", data->arena[i++]);
+	// }
 }
 
 void	parse_champion(t_data *data, const char *file_name, uint8_t uid)
