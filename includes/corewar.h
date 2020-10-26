@@ -6,7 +6,7 @@
 /*   By: acarlett <acarlett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/19 20:53:44 by lmittie           #+#    #+#             */
-/*   Updated: 2020/10/24 17:47:24 by acarlett         ###   ########.fr       */
+/*   Updated: 2020/10/26 19:31:13 by acarlett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,9 @@ typedef struct		s_data
 	uint32_t			dump_cycles;
 }					t_data;
 
-void	parse_arguments(int ac, const char **av, t_data *data);
-void	parse_champions(t_args (*champs)[MAX_PLAYERS], t_data *data, const char **av);
+void		parse_arguments(int ac, const char **av, t_data *data);
+void		parse_champions(t_args (*champs)[MAX_PLAYERS], t_data *data, const char **av);
+void		test(t_data *data);
 void		visual(t_data *data);
 
 #endif

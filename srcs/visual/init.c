@@ -6,11 +6,14 @@
 /*   By: acarlett <acarlett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 23:30:54 by acarlett          #+#    #+#             */
-/*   Updated: 2020/10/25 20:52:26 by acarlett         ###   ########.fr       */
+/*   Updated: 2020/10/26 21:58:30 by acarlett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/corewar_visual.h"
+#include <panel.h>
+#include <sys/ioctl.h>
+#include <stdio.h>
 
 void		clear_window(WINDOW *win)
 {
@@ -33,52 +36,37 @@ void		clear_window(WINDOW *win)
 
 }
 
-// char		*convert_x_to_char(t_data *data)
-// {
-// 	char	a[2];
-// 	int		i;
-
-// 	i = 0;
-// 	data->arena[i];
-// }
-
-char		*int_to_x(uint8_t arena)
+void		test(t_data *data)
 {
-	char	*tmp;
-	int		buff;
-	int		i;
+	WINDOW *win;
+	int i;
+	int x;
+	int y;
 
 	i = 0;
-	tmp = malloc(sizeof(char) * 3);
-	while (arena % 16)
-	{
-		buff = arena % 16;
-		switch (buff = arena % 16)
-		{
-		case 10:
-			tmp[i] = 'a';
-		case 11:
-			tmp[i] = 'a';
-		case 12:
-			tmp[i] = 'a';
-		case 13:
-			tmp[i] = 'a';
-		case 14:
-			tmp[i] = 'a';
-		case 15:
-			tmp[i] = 'a';
-		}
-		i++;
-		arena = arena / 16;
-	}
-	tmp[2] = '\0';
-	return (tmp);
+
+    struct winsize win_size;
+    ioctl(0, TIOCGWINSZ, &win_size);
+
+    printf ("lines %d\n", win_size.ws_row);
+    printf ("columns %d\n", win_size.ws_col);
+	initscr();
+	start_color();
+	// init_pair(1, COLOR_RED, COLOR_CYAN);
+	win = newwin(win_size.ws_row, win_size.ws_col, 0, 0);
+	// attron(1);
+	box(win, 0, 0);
+	touchwin(win);
+	refresh();
+	// attroff(1);
+	wrefresh(win);
+	delwin(win);
+	getch();
 }
 
 void		visual(t_data *data)
 {
 	WINDOW	*win;
-	char	*ch;
 	int		set_x;
 	int		set_y;
 	int i;
@@ -87,31 +75,57 @@ void		visual(t_data *data)
 
 	i = 0;
 	j = 0;
-	ch = malloc(sizeof(char) * 2);
 	initscr();
-	getmaxyx(stdscr, set_y, set_x);
-	curs_set(false);
-
 	
+	getmaxyx(stdscr, set_y, set_x);
 	win = newwin(HEIGHT, WIDTH, set_y, set_x);
-	start_color();
-	key = 1;
-	init_pair(1, COLOR_CYAN, COLOR_BLACK);
+	
+	curs_set(false);
+	
+	init_pair(3, COLOR_GREEN, COLOR_MAGENTA);
 
-	i = MEM_SIZE;
-	attron(COLOR_PAIR(1));
-	while (data->champs->header.prog_size--)
-	{
-		ch = int_to_x(data->arena[j]);
-		addch(48);
-		addstr(ch);
-		addch(' ');
-		j++;
-		// ch = convert_x_to_char(data);
-		// printf("%02x ", data->arena[j++]);
-		i--;
-	}
-	attroff(COLOR_PAIR(1));
+	attron(COLOR_PAIR(3));
+	box(win, '*', '*');
+	attroff(COLOR_PAIR(3));
+	wrefresh(win);
+
+	start_color();
+	init_pair(1, COLOR_CYAN, COLOR_BLACK);
+	init_pair(2, COLOR_WHITE, COLOR_BLACK);
+	// attron(COLOR_PAIR(1));
+	// i = 0;
+	// while (i != data->champs->header.prog_size)
+	// {
+	// 	printw("%02x ", data->arena[i]);
+	// 	i++;
+	// }
+	// attroff(COLOR_PAIR(1));
+	// attron(COLOR_PAIR(2));
+	// while (i != MEM_SIZE)
+	// {
+	// 	printw("00 ");
+	// 	i++;
+	// }
+	// attroff(COLOR_PAIR(1));
+	curs_set(true);
+    delwin(win);
+    getch();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	// while (1 || key != 27)
 	// {
@@ -143,9 +157,3 @@ void		visual(t_data *data)
 	// 	delay_output(100);
 	// 	clear();
 	// }
-	attroff(COLOR_PAIR(1));
-	curs_set(true);
-    delwin(win);
-    getch();
-	printw("Hello world!!\n");
-}

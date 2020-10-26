@@ -6,7 +6,7 @@
 #    By: acarlett <acarlett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/23 23:17:20 by acarlett          #+#    #+#              #
-#    Updated: 2020/10/24 17:48:58 by acarlett         ###   ########.fr        #
+#    Updated: 2020/10/26 19:10:32 by acarlett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,4 +27,4 @@ INCL =	$(DIR_INC)/corewar.h \
 		$(DIR_INC)/corewar_visual.h
 
 all:
-	@gcc $(SRCS_CORE) $(SRCS_VISUAL) -I includes/ -L ft_printf ft_printf/libftprintf.a -lncurses
+	@gcc $(SRCS_CORE) $(SRCS_VISUAL) -I includes/ -L ft_printf ft_printf/libftprintf.a -lpanel -lncurses
