@@ -6,7 +6,7 @@
 /*   By: acarlett <acarlett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/19 20:52:05 by lmittie           #+#    #+#             */
-/*   Updated: 2020/10/26 19:31:54 by acarlett         ###   ########.fr       */
+/*   Updated: 2020/10/27 18:00:43 by acarlett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,6 @@ int 	main(int ac, char **av)
 		init(&data);
 		parse_arguments(ac, (const char**)av, &data);
 	}
-	i = 0;
-	// while (data.champs->header.prog_size--)
-	// {
-	// 	printf("%02x ", data.arena[i++]);
-	// }
-	// visual(&data);
-	test(&data);
+	visual(&data);
 	return (0);
 }

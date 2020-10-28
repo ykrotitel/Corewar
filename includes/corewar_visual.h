@@ -6,7 +6,7 @@
 /*   By: acarlett <acarlett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 23:13:25 by acarlett          #+#    #+#             */
-/*   Updated: 2020/10/26 21:53:51 by acarlett         ###   ########.fr       */
+/*   Updated: 2020/10/27 18:42:28 by acarlett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,23 @@
 # define LINES 30
 # define COLUMNS 200
 
-void		test(t_data *data);
+typedef struct	s_wins
+{
+	WINDOW		*arena_win;
+	WINDOW		*info_win;
+}				t_wins;
+
+typedef struct		s_visual
+{
+	t_wins			wins;
+	struct winsize	win_size;
+	
+}					t_visual;
+
+
+/*
+** init.c
+*/
 void		visual(t_data *data);
 
 # endif

@@ -6,7 +6,7 @@
 /*   By: acarlett <acarlett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 23:30:54 by acarlett          #+#    #+#             */
-/*   Updated: 2020/10/26 21:58:30 by acarlett         ###   ########.fr       */
+/*   Updated: 2020/10/28 17:13:29 by acarlett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,101 +15,112 @@
 #include <sys/ioctl.h>
 #include <stdio.h>
 
-void		clear_window(WINDOW *win)
+void		init_ncurses(t_data *data, t_visual *visual, struct winsize *win_size)
 {
-	int y;
-	int x;
-	int tmp_x;
-
-	getmaxyx(win, y, x);
-	tmp_x = x;
-	while (y != 0)
-	{
-		while (x != 0)
-		{
-			mvaddch(y, x, ' ');
-			x--;
-		}
-		x = tmp_x;
-		y--;
-	}
+	initscr();
+	noecho();
+	curs_set(false);
+	start_color();
+    ioctl(0, TIOCGWINSZ, win_size);
+	visual->wins.arena_win = newwin(win_size->ws_row, 238, 0, 0);
+	visual->wins.info_win = newwin(win_size->ws_row, 55, 0, 238);
 
 }
 
-void		test(t_data *data)
+void		make_arena(t_data *data, WINDOW *arena_win, t_visual *visual)
 {
-	WINDOW *win;
 	int i;
+	int j;
 	int x;
-	int y;
+	int	count;
+	int	ch;
 
 	i = 0;
+	j = 0;
+	x = 0;
+	ch = 1;
+	count = 0;
+	wprintw(arena_win, "\n");
+	while (ch != 113 && i != MEM_SIZE - 1)
+	{
+		if (i % 79 == 0)
+			wprintw(arena_win, " ");
 
-    struct winsize win_size;
-    ioctl(0, TIOCGWINSZ, &win_size);
 
-    printf ("lines %d\n", win_size.ws_row);
-    printf ("columns %d\n", win_size.ws_col);
-	initscr();
-	start_color();
-	// init_pair(1, COLOR_RED, COLOR_CYAN);
-	win = newwin(win_size.ws_row, win_size.ws_col, 0, 0);
-	// attron(1);
-	box(win, 0, 0);
-	touchwin(win);
-	refresh();
-	// attroff(1);
-	wrefresh(win);
-	delwin(win);
-	getch();
+		if (i == (MEM_SIZE / data->players_num) * count || x)
+		{
+			x++;
+			wattron(arena_win, COLOR_PAIR(count + 1));
+		}
+
+		
+		wprintw(arena_win, "%02x ", data->arena[i]);
+		
+		if (x == data->champs[count].header.prog_size)
+		{
+			wattroff(arena_win, COLOR_PAIR(count + 1));
+			x = 0;
+			count++;
+		}
+		i++;
+		j = j + 3;
+	}
+		box(arena_win, 0, 0);
+}
+
+
+void		make_color_pair()
+{
+	init_pair(1, COLOR_BLUE, COLOR_BLACK);
+	init_pair(2, COLOR_GREEN, COLOR_BLACK);
+	init_pair(3, COLOR_MAGENTA, COLOR_BLACK);
+	init_pair(4, COLOR_CYAN, COLOR_BLACK);
+	init_pair(5, COLOR_YELLOW, COLOR_BLACK);
+	init_pair(6, COLOR_WHITE, COLOR_BLACK);
+}
+
+void		make_info_table(t_data *data, WINDOW *info_win)
+{
+		wmove(info_win, 1, 1);
+		wattron(info_win, COLOR_PAIR(5));
+		wprintw(info_win, "CYCLES TO DIE: ");
+		wattron(info_win, COLOR_PAIR(6));
+		wprintw(info_win, "%d\n\n", data->cycles_to_die);
+		wattron(info_win, COLOR_PAIR(5));
+		wprintw(info_win, " LIVE COUNTER:");
+		wattron(info_win, COLOR_PAIR(6));
+		wprintw(info_win, "  %d", data->live_op_counter);
+		wattroff(info_win, COLOR_PAIR(5));
+		box(info_win, 0, 0);
+
 }
 
 void		visual(t_data *data)
 {
-	WINDOW	*win;
-	int		set_x;
-	int		set_y;
-	int i;
-	int j;
-	int	key;
+	t_visual visual;
+	int x;
+	int y;
+	int button;
 
-	i = 0;
-	j = 0;
-	initscr();
-	
-	getmaxyx(stdscr, set_y, set_x);
-	win = newwin(HEIGHT, WIDTH, set_y, set_x);
-	
-	curs_set(false);
-	
-	init_pair(3, COLOR_GREEN, COLOR_MAGENTA);
+	button = 1;
+	init_ncurses(data, &visual, &(visual.win_size));
+	while (button != 113)
+	{
+		make_color_pair();
+		make_arena(data, visual.wins.arena_win, &visual);
+		make_info_table(data, visual.wins.info_win);
 
-	attron(COLOR_PAIR(3));
-	box(win, '*', '*');
-	attroff(COLOR_PAIR(3));
-	wrefresh(win);
 
-	start_color();
-	init_pair(1, COLOR_CYAN, COLOR_BLACK);
-	init_pair(2, COLOR_WHITE, COLOR_BLACK);
-	// attron(COLOR_PAIR(1));
-	// i = 0;
-	// while (i != data->champs->header.prog_size)
-	// {
-	// 	printw("%02x ", data->arena[i]);
-	// 	i++;
-	// }
-	// attroff(COLOR_PAIR(1));
-	// attron(COLOR_PAIR(2));
-	// while (i != MEM_SIZE)
-	// {
-	// 	printw("00 ");
-	// 	i++;
-	// }
-	// attroff(COLOR_PAIR(1));
+
+		refresh();
+		wrefresh(visual.wins.arena_win);
+		wrefresh(visual.wins.info_win);
+		button = wgetch(visual.wins.arena_win);
+	}
+	delwin(visual.wins.arena_win);
+	delwin(visual.wins.info_win);
+	getch();
 	curs_set(true);
-    delwin(win);
-    getch();
 }
 
 
