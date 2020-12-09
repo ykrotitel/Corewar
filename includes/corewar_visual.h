@@ -6,7 +6,7 @@
 /*   By: acarlett <acarlett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 23:13:25 by acarlett          #+#    #+#             */
-/*   Updated: 2020/12/09 14:52:48 by acarlett         ###   ########.fr       */
+/*   Updated: 2020/12/09 18:54:13 by acarlett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,6 @@ typedef struct		s_visual
 /*
 ** init.c
 */
-void		visual(t_data *data, int *button);
+void		visual(t_data *data, int *button, int flag);
 
 # endif

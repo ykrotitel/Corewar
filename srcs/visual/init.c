@@ -6,7 +6,7 @@
 /*   By: acarlett <acarlett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 23:30:54 by acarlett          #+#    #+#             */
-/*   Updated: 2020/12/09 17:04:34 by acarlett         ###   ########.fr       */
+/*   Updated: 2020/12/09 18:54:56 by acarlett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -201,18 +201,33 @@ void		first_init(t_data *data, t_visual *visual)
 	}
 }
 
-void		visual(t_data *data, int *button)
+void		handle_keys(int *button)
+{
+       if ((*button) == '0') {
+            *button = getch();
+	   }
+}
+
+void		first_show_arena(t_data *data, t_visual visual, int *button)
+{
+	if (*button == '0')
+	{
+		make_color_pair();
+		make_arena(data, visual.wins.arena_win, &visual);
+		make_info_table(data, visual.wins.info_win);
+		refresh();
+		wrefresh(visual.wins.arena_win);
+		wrefresh(visual.wins.info_win);
+	}
+}
+
+void		visual(t_data *data, int *button, int flag)
 {
 	t_visual visual;
 
 	first_init(data, &visual);
-
 	init_ncurses(data, &visual, &(visual.win_size));
-
-       if ((*button) == '0') {
-            *button = wgetch(visual.wins.arena_win);
-       }
-	if (*button != '0')
+	if (*button == ' ' || flag)
 	{
 		make_color_pair();
 		make_arena(data, visual.wins.arena_win, &visual);
@@ -221,9 +236,10 @@ void		visual(t_data *data, int *button)
 
 
 		refresh();
-		delay_output(5);
+		delay_output(50);
 		wrefresh(visual.wins.arena_win);
 		wrefresh(visual.wins.info_win);
+		handle_keys(button);
 	}
 	delwin(visual.wins.arena_win);
 	delwin(visual.wins.info_win);

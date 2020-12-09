@@ -6,7 +6,7 @@
 /*   By: acarlett <acarlett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/19 20:53:44 by lmittie           #+#    #+#             */
-/*   Updated: 2020/12/09 16:57:14 by acarlett         ###   ########.fr       */
+/*   Updated: 2020/12/09 18:54:11 by acarlett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,6 +110,6 @@ void		lld(t_data *data, t_carriage **carriage, int32_t pos);
 void		lldi(t_data *data, t_carriage **carriage, int32_t pos);
 void		lfork(t_data *data, t_carriage **carriage, int32_t pos);
 void		aff(t_data *data, t_carriage **carriage, int32_t pos);
-void		visual(t_data *data, int *button);
+void		visual(t_data *data, int *button, int flag);
 
 #endif
