@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_arguments.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmittie <lmittie@student.42.fr>            +#+  +:+       +#+        */
+/*   By: acarlett <acarlett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 18:12:59 by lmittie           #+#    #+#             */
-/*   Updated: 2020/10/22 18:12:59 by lmittie          ###   ########.fr       */
+/*   Updated: 2020/12/09 14:55:40 by acarlett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,22 @@ void	handle_arg_it(t_args (*champs)[MAX_PLAYERS], int players_num)
 		exit(1);
 }
 
+void	handle_color_code(t_data *data)
+{
+	t_carriage	*tmp;
+	int			i;
+
+	tmp = data->carriage_list;
+	i = 0;
+	while (tmp != NULL)
+	{
+		tmp->color_code = data->players_num - i;
+		i++;
+		tmp = tmp->next; 
+	}
+	ft_bzero(data->code_color, MEM_SIZE);
+}
+
 void	parse_arguments(int ac, const char **av, t_data *data)
 {
 	int		i;
@@ -98,6 +114,8 @@ void	parse_arguments(int ac, const char **av, t_data *data)
 				switch_champions(&arg_it, n, ++i);
 			data->players_num++;
 		}
+		else if (!(ft_strcmp("-a", av[i])))
+			data->a_flag = 1;
 		else
 		{
 			add_arg_it(&arg_it, i);
@@ -107,4 +125,5 @@ void	parse_arguments(int ac, const char **av, t_data *data)
 	}
 	handle_arg_it(&arg_it, data->players_num);
 	parse_champions(&arg_it, data, av);
+	handle_color_code(data);
 }

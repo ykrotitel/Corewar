@@ -6,7 +6,7 @@
 /*   By: acarlett <acarlett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 18:06:12 by lmittie           #+#    #+#             */
-/*   Updated: 2020/10/26 18:49:38 by acarlett         ###   ########.fr       */
+/*   Updated: 2020/12/09 16:56:38 by acarlett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,21 +100,37 @@ void	parse_exec_code_size(unsigned int *size, int fd)
 		exit(20);
 }
 
+void	init_carriage(t_carriage **clist, uint32_t uid, size_t pos)
+{
+	t_carriage *carriage;
+
+	if (!(carriage = malloc(sizeof(t_carriage))))
+		exit(30);
+	ft_bzero(carriage, sizeof(t_carriage));
+
+	carriage->uid = uid;
+	carriage->registers[0] = (int16_t)uid * -1;
+	carriage->curr_pos = pos;
+	carriage->next = NULL;
+	if (*clist == NULL)
+		*clist = carriage;
+	else
+	{
+		carriage->next = *clist;
+		*clist = carriage;
+	}
+}
+
 void	parse_exec_code(t_data *data, int fd, uint8_t uid)
 {
 	uint8_t byte;
 	size_t	i;
 
 	i = (MEM_SIZE / data->players_num) * (uid - 1);
+	init_carriage(&data->carriage_list, uid, i);
+	// data->carriage_list->color = hui;
 	while (read(fd, &byte, 1))
-	{
 		data->arena[i++] = byte;
-	}
-	i = 0;
-	// while (data->champs->header.prog_size--)
-	// {
-	// 	printf("%02x ", data->arena[i++]);
-	// }
 }
 
 void	parse_champion(t_data *data, const char *file_name, uint8_t uid)
@@ -132,6 +148,23 @@ void	parse_champion(t_data *data, const char *file_name, uint8_t uid)
 	parse_exec_code(data, fd, uid);
 }
 
+void	introduce_champions(t_champ champs[MAX_PLAYERS], int players_num)
+{
+	int i;
+
+	ft_printf("Introducing contestants...\n");
+	i = 0;
+	while (i < players_num)
+	{
+		ft_printf("* Player %u, weighing %u bytes, \"%s\" (\"%s\") !\n",
+			champs[i].uid,
+			champs[i].header.prog_size,
+			champs[i].header.prog_name,
+			champs[i].header.comment);
+		i++;
+	}
+}
+
 void	parse_champions(t_args (*champs)[MAX_PLAYERS], t_data *data, const char **av)
 {
 	int i;
@@ -142,4 +175,5 @@ void	parse_champions(t_args (*champs)[MAX_PLAYERS], t_data *data, const char **a
 		parse_champion(data, av[(*champs)[i].arg_it], i + 1);
 		i++;
 	}
+	introduce_champions(data->champs, data->players_num);
 }

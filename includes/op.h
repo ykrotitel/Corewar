@@ -52,7 +52,7 @@
 **
 */
 
-typedef char	t_arg_type;
+typedef uint8_t				t_arg_type;
 
 #define T_REG					1
 #define T_DIR					2

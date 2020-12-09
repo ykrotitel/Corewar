@@ -6,7 +6,7 @@
 /*   By: acarlett <acarlett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 23:13:25 by acarlett          #+#    #+#             */
-/*   Updated: 2020/10/27 18:42:28 by acarlett         ###   ########.fr       */
+/*   Updated: 2020/12/09 14:52:48 by acarlett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct		s_visual
 {
 	t_wins			wins;
 	struct winsize	win_size;
+	uint8_t			carriage[MEM_SIZE];
 	
 }					t_visual;
 
@@ -40,6 +41,6 @@ typedef struct		s_visual
 /*
 ** init.c
 */
-void		visual(t_data *data);
+void		visual(t_data *data, int *button);
 
 # endif
