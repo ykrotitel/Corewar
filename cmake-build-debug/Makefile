@@ -3113,6 +3113,33 @@ srcs/parse_champions.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/parse_champions.c.s
 .PHONY : srcs/parse_champions.c.s
 
+srcs/print.o: srcs/print.c.o
+
+.PHONY : srcs/print.o
+
+# target to build an object file
+srcs/print.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/print.c.o
+.PHONY : srcs/print.c.o
+
+srcs/print.i: srcs/print.c.i
+
+.PHONY : srcs/print.i
+
+# target to preprocess a source file
+srcs/print.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/print.c.i
+.PHONY : srcs/print.c.i
+
+srcs/print.s: srcs/print.c.s
+
+.PHONY : srcs/print.s
+
+# target to generate assembly for a file
+srcs/print.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/print.c.s
+.PHONY : srcs/print.c.s
+
 srcs/st.o: srcs/st.c.o
 
 .PHONY : srcs/st.o
@@ -3506,6 +3533,9 @@ help:
 	@echo "... srcs/parse_champions.o"
 	@echo "... srcs/parse_champions.i"
 	@echo "... srcs/parse_champions.s"
+	@echo "... srcs/print.o"
+	@echo "... srcs/print.i"
+	@echo "... srcs/print.s"
 	@echo "... srcs/st.o"
 	@echo "... srcs/st.i"
 	@echo "... srcs/st.s"

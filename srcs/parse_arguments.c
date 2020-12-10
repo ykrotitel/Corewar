@@ -6,7 +6,7 @@
 /*   By: acarlett <acarlett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 18:12:59 by lmittie           #+#    #+#             */
-/*   Updated: 2020/12/09 14:55:40 by acarlett         ###   ########.fr       */
+/*   Updated: 2020/12/09 18:08:44 by lmittie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,50 +78,70 @@ void	handle_color_code(t_data *data)
 		i++;
 		tmp = tmp->next; 
 	}
-	ft_bzero(data->code_color, MEM_SIZE);
+}
+
+void	parse_dump(uint32_t *dump, const char **av, int *i, int ac)
+{
+	if (*i + 1 != ac)
+		*dump = ft_atoi(av[++(*i)]);
+	else
+		exit(1);
+	if (dump <= 0)
+		exit(1);
+}
+
+void	parse_n_flag(int *i, int ac, const char **av, t_args (*arg_it)[MAX_PLAYERS])
+{
+	int n;
+
+	if (*i + 1 != ac)
+		n = ft_atoi(av[++(*i)]);
+	else
+		exit(1);
+	if (n > MAX_PLAYERS || n <= 0 || (*arg_it)[n - 1].n_flag)
+		exit(1);
+	if ((*arg_it)[n - 1].arg_it)
+		switch_champions(arg_it, n, ++(*i));
+}
+
+void	parse_flags(int *i, int ac, t_data *data, const char **av)
+{
+	if (!(ft_strcmp("-dump", av[*i])))
+		parse_dump(&data->dump_cycles, av, i, ac);
+	else if (!(ft_strcmp("-a", av[*i])))
+		data->a_flag = 1;
+	else if (!(ft_strcmp("-v", av[*i])))
+		data->v_flag = 1;
+	else if (!(ft_strcmp("-h", av[*i])))
+	{
+		if (*i + 1 != ac)
+			data->h_flag = ft_atoi(av[++(*i)]);
+		else
+			exit(1);
+	}
 }
 
 void	parse_arguments(int ac, const char **av, t_data *data)
 {
 	int		i;
-	int		n;
 	t_args	arg_it[MAX_PLAYERS];
 
-	i = 1;
+	i = 0;
 	ft_bzero(arg_it, sizeof(t_args) * MAX_PLAYERS);
-	while (i < ac)
+	while (++i < ac)
 	{
-		if (!(ft_strcmp("-dump", av[i])))
+		if (!(ft_strcmp("-n", av[i])))
 		{
-			if (i + 1 != ac)
-				data->dump_cycles = ft_atoi(av[++i]);
-			else
-				exit(1);
-			if (data->dump_cycles <= 0)
-				exit(1);
-		}
-		else if (!(ft_strcmp("-n", av[i])))
-		{
-			if (i + 1 != ac)
-				n = ft_atoi(av[++i]);
-			else
-				exit(1);
-			if (n > MAX_PLAYERS || n <= 0 || arg_it[n - 1].n_flag)
-				exit(1);
-			if (i + 1 == ac)
-				exit(1);
-			if (arg_it[n - 1].arg_it)
-				switch_champions(&arg_it, n, ++i);
+			parse_n_flag(&i, ac, av, &arg_it);
 			data->players_num++;
 		}
-		else if (!(ft_strcmp("-a", av[i])))
-			data->a_flag = 1;
+		else if (!(ft_strncmp("-", av[i], 1)))
+			parse_flags(&i, ac, data, av);
 		else
 		{
 			add_arg_it(&arg_it, i);
 			data->players_num++;
 		}
-		i++;
 	}
 	handle_arg_it(&arg_it, data->players_num);
 	parse_champions(&arg_it, data, av);

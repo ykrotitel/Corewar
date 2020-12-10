@@ -430,6 +430,9 @@
 		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/parse_champions.c">
 			<Option target="corewar"/>
 		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/print.c">
+			<Option target="corewar"/>
+		</Unit>
 		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/st.c">
 			<Option target="corewar"/>
 		</Unit>

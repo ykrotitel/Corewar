@@ -114,6 +114,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/lmittie/Desktop/corewar/srcs/operations.c" "/Users/lmittie/Desktop/corewar/cmake-build-debug/CMakeFiles/corewar.dir/srcs/operations.c.o"
   "/Users/lmittie/Desktop/corewar/srcs/parse_arguments.c" "/Users/lmittie/Desktop/corewar/cmake-build-debug/CMakeFiles/corewar.dir/srcs/parse_arguments.c.o"
   "/Users/lmittie/Desktop/corewar/srcs/parse_champions.c" "/Users/lmittie/Desktop/corewar/cmake-build-debug/CMakeFiles/corewar.dir/srcs/parse_champions.c.o"
+  "/Users/lmittie/Desktop/corewar/srcs/print.c" "/Users/lmittie/Desktop/corewar/cmake-build-debug/CMakeFiles/corewar.dir/srcs/print.c.o"
   "/Users/lmittie/Desktop/corewar/srcs/st.c" "/Users/lmittie/Desktop/corewar/cmake-build-debug/CMakeFiles/corewar.dir/srcs/st.c.o"
   "/Users/lmittie/Desktop/corewar/srcs/zjmp.c" "/Users/lmittie/Desktop/corewar/cmake-build-debug/CMakeFiles/corewar.dir/srcs/zjmp.c.o"
   )

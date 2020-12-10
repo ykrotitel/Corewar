@@ -110,4 +110,4 @@ add_executable(corewar
         includes/corewar.h
         includes/op.h
         srcs/main.c
-        srcs/op.c srcs/parse_arguments.c srcs/parse_champions.c srcs/game.c srcs/cycles_to_die_check.c srcs/operations.c srcs/handle_value.c srcs/live.c srcs/ld.c srcs/st.c srcs/add_sub.c srcs/and_or_xor.c srcs/fork.c srcs/aff.c srcs/zjmp.c)
+        srcs/op.c srcs/parse_arguments.c srcs/parse_champions.c srcs/game.c srcs/cycles_to_die_check.c srcs/operations.c srcs/handle_value.c srcs/live.c srcs/ld.c srcs/st.c srcs/add_sub.c srcs/and_or_xor.c srcs/fork.c srcs/aff.c srcs/zjmp.c srcs/print.c)

@@ -6,7 +6,7 @@
 #    By: acarlett <acarlett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/23 23:17:20 by acarlett          #+#    #+#              #
-#    Updated: 2020/12/09 19:34:33 by acarlett         ###   ########.fr        #
+#    Updated: 2020/12/10 21:35:34 by acarlett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,10 +27,10 @@ SRCS_CORE =	$(DIR_SRCS)/add_sub.c \
 			$(DIR_SRCS)/live.c \
 			$(DIR_SRCS)/main.c \
 			$(DIR_SRCS)/op.c \
-			$(DIR_SRCS)/operations.c \
 			$(DIR_SRCS)/parse_arguments.c \
 			$(DIR_SRCS)/parse_champions.c \
 			$(DIR_SRCS)/st.c \
+			$(DIR_SRCS)/print.c \
 			$(DIR_SRCS)/zjmp.c
 
 SRCS_VISUAL =	$(DIR_VIS)/init.c \

@@ -6,20 +6,20 @@
 /*   By: acarlett <acarlett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 16:59:23 by lmittie           #+#    #+#             */
-/*   Updated: 2020/12/09 16:42:57 by acarlett         ###   ########.fr       */
+/*   Updated: 2020/12/10 21:29:55 by acarlett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
 
-int32_t	get_pos(int32_t pos)
+int32_t		get_pos(int32_t pos)
 {
 	if (pos < 0)
 		return (pos % MEM_SIZE + MEM_SIZE);
 	return (pos % MEM_SIZE);
 }
 
-int32_t	get_value(size_t size, const uint8_t (*arena)[MEM_SIZE], int32_t pos)
+int32_t		get_value(size_t size, const uint8_t (*arena)[MEM_SIZE], int32_t pos)
 {
 	size_t	i;
 	int32_t	arg;
@@ -68,7 +68,6 @@ void		place_value(int32_t arg, int32_t pos, t_carriage *carriage, t_data *data)
 	while (size--)
 	{
 		data->arena[get_pos(pos + size)] = arg & 0xFF;
-		data->code_color[get_pos(pos + size)] = carriage->color_code;
 		arg >>= (uint32_t)8;
 	}
 }

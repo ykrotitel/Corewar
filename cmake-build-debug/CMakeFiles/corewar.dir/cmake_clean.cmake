@@ -109,6 +109,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/corewar.dir/srcs/operations.c.o"
   "CMakeFiles/corewar.dir/srcs/parse_arguments.c.o"
   "CMakeFiles/corewar.dir/srcs/parse_champions.c.o"
+  "CMakeFiles/corewar.dir/srcs/print.c.o"
   "CMakeFiles/corewar.dir/srcs/st.c.o"
   "CMakeFiles/corewar.dir/srcs/zjmp.c.o"
   "corewar"
