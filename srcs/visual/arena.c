@@ -6,7 +6,7 @@
 /*   By: acarlett <acarlett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 19:13:47 by acarlett          #+#    #+#             */
-/*   Updated: 2020/12/09 19:48:00 by acarlett         ###   ########.fr       */
+/*   Updated: 2020/12/11 18:04:01 by acarlett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void		show_arena(t_data *data, t_visual visual, int *button)
 	refresh();
 	wrefresh(visual.wins.arena_win);
 	wrefresh(visual.wins.info_win);
-	delay_output(50);
+	// delay_output(50);
 }
 
 void		set_color_on(t_data *data, int i,
