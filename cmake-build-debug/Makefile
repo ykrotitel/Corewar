@@ -2843,6 +2843,33 @@ srcs/cycles_to_die_check.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/cycles_to_die_check.c.s
 .PHONY : srcs/cycles_to_die_check.c.s
 
+srcs/error.o: srcs/error.c.o
+
+.PHONY : srcs/error.o
+
+# target to build an object file
+srcs/error.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/error.c.o
+.PHONY : srcs/error.c.o
+
+srcs/error.i: srcs/error.c.i
+
+.PHONY : srcs/error.i
+
+# target to preprocess a source file
+srcs/error.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/error.c.i
+.PHONY : srcs/error.c.i
+
+srcs/error.s: srcs/error.c.s
+
+.PHONY : srcs/error.s
+
+# target to generate assembly for a file
+srcs/error.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/error.c.s
+.PHONY : srcs/error.c.s
+
 srcs/fork.o: srcs/fork.c.o
 
 .PHONY : srcs/fork.o
@@ -2923,6 +2950,60 @@ srcs/handle_value.s: srcs/handle_value.c.s
 srcs/handle_value.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/handle_value.c.s
 .PHONY : srcs/handle_value.c.s
+
+srcs/init_carriage.o: srcs/init_carriage.c.o
+
+.PHONY : srcs/init_carriage.o
+
+# target to build an object file
+srcs/init_carriage.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/init_carriage.c.o
+.PHONY : srcs/init_carriage.c.o
+
+srcs/init_carriage.i: srcs/init_carriage.c.i
+
+.PHONY : srcs/init_carriage.i
+
+# target to preprocess a source file
+srcs/init_carriage.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/init_carriage.c.i
+.PHONY : srcs/init_carriage.c.i
+
+srcs/init_carriage.s: srcs/init_carriage.c.s
+
+.PHONY : srcs/init_carriage.s
+
+# target to generate assembly for a file
+srcs/init_carriage.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/init_carriage.c.s
+.PHONY : srcs/init_carriage.c.s
+
+srcs/is_invalid_arg.o: srcs/is_invalid_arg.c.o
+
+.PHONY : srcs/is_invalid_arg.o
+
+# target to build an object file
+srcs/is_invalid_arg.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/is_invalid_arg.c.o
+.PHONY : srcs/is_invalid_arg.c.o
+
+srcs/is_invalid_arg.i: srcs/is_invalid_arg.c.i
+
+.PHONY : srcs/is_invalid_arg.i
+
+# target to preprocess a source file
+srcs/is_invalid_arg.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/is_invalid_arg.c.i
+.PHONY : srcs/is_invalid_arg.c.i
+
+srcs/is_invalid_arg.s: srcs/is_invalid_arg.c.s
+
+.PHONY : srcs/is_invalid_arg.s
+
+# target to generate assembly for a file
+srcs/is_invalid_arg.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/is_invalid_arg.c.s
+.PHONY : srcs/is_invalid_arg.c.s
 
 srcs/ld.o: srcs/ld.c.o
 
@@ -3032,33 +3113,6 @@ srcs/op.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/op.c.s
 .PHONY : srcs/op.c.s
 
-srcs/operations.o: srcs/operations.c.o
-
-.PHONY : srcs/operations.o
-
-# target to build an object file
-srcs/operations.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/operations.c.o
-.PHONY : srcs/operations.c.o
-
-srcs/operations.i: srcs/operations.c.i
-
-.PHONY : srcs/operations.i
-
-# target to preprocess a source file
-srcs/operations.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/operations.c.i
-.PHONY : srcs/operations.c.i
-
-srcs/operations.s: srcs/operations.c.s
-
-.PHONY : srcs/operations.s
-
-# target to generate assembly for a file
-srcs/operations.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/operations.c.s
-.PHONY : srcs/operations.c.s
-
 srcs/parse_arguments.o: srcs/parse_arguments.c.o
 
 .PHONY : srcs/parse_arguments.o
@@ -3085,6 +3139,33 @@ srcs/parse_arguments.s: srcs/parse_arguments.c.s
 srcs/parse_arguments.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/parse_arguments.c.s
 .PHONY : srcs/parse_arguments.c.s
+
+srcs/parse_champion_parts.o: srcs/parse_champion_parts.c.o
+
+.PHONY : srcs/parse_champion_parts.o
+
+# target to build an object file
+srcs/parse_champion_parts.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/parse_champion_parts.c.o
+.PHONY : srcs/parse_champion_parts.c.o
+
+srcs/parse_champion_parts.i: srcs/parse_champion_parts.c.i
+
+.PHONY : srcs/parse_champion_parts.i
+
+# target to preprocess a source file
+srcs/parse_champion_parts.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/parse_champion_parts.c.i
+.PHONY : srcs/parse_champion_parts.c.i
+
+srcs/parse_champion_parts.s: srcs/parse_champion_parts.c.s
+
+.PHONY : srcs/parse_champion_parts.s
+
+# target to generate assembly for a file
+srcs/parse_champion_parts.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/parse_champion_parts.c.s
+.PHONY : srcs/parse_champion_parts.c.s
 
 srcs/parse_champions.o: srcs/parse_champions.c.o
 
@@ -3113,6 +3194,33 @@ srcs/parse_champions.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/parse_champions.c.s
 .PHONY : srcs/parse_champions.c.s
 
+srcs/parse_flags.o: srcs/parse_flags.c.o
+
+.PHONY : srcs/parse_flags.o
+
+# target to build an object file
+srcs/parse_flags.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/parse_flags.c.o
+.PHONY : srcs/parse_flags.c.o
+
+srcs/parse_flags.i: srcs/parse_flags.c.i
+
+.PHONY : srcs/parse_flags.i
+
+# target to preprocess a source file
+srcs/parse_flags.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/parse_flags.c.i
+.PHONY : srcs/parse_flags.c.i
+
+srcs/parse_flags.s: srcs/parse_flags.c.s
+
+.PHONY : srcs/parse_flags.s
+
+# target to generate assembly for a file
+srcs/parse_flags.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/parse_flags.c.s
+.PHONY : srcs/parse_flags.c.s
+
 srcs/print.o: srcs/print.c.o
 
 .PHONY : srcs/print.o
@@ -3140,6 +3248,33 @@ srcs/print.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/print.c.s
 .PHONY : srcs/print.c.s
 
+srcs/set_operation_code.o: srcs/set_operation_code.c.o
+
+.PHONY : srcs/set_operation_code.o
+
+# target to build an object file
+srcs/set_operation_code.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/set_operation_code.c.o
+.PHONY : srcs/set_operation_code.c.o
+
+srcs/set_operation_code.i: srcs/set_operation_code.c.i
+
+.PHONY : srcs/set_operation_code.i
+
+# target to preprocess a source file
+srcs/set_operation_code.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/set_operation_code.c.i
+.PHONY : srcs/set_operation_code.c.i
+
+srcs/set_operation_code.s: srcs/set_operation_code.c.s
+
+.PHONY : srcs/set_operation_code.s
+
+# target to generate assembly for a file
+srcs/set_operation_code.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/set_operation_code.c.s
+.PHONY : srcs/set_operation_code.c.s
+
 srcs/st.o: srcs/st.c.o
 
 .PHONY : srcs/st.o
@@ -3166,6 +3301,33 @@ srcs/st.s: srcs/st.c.s
 srcs/st.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/st.c.s
 .PHONY : srcs/st.c.s
+
+srcs/validate_args.o: srcs/validate_args.c.o
+
+.PHONY : srcs/validate_args.o
+
+# target to build an object file
+srcs/validate_args.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/validate_args.c.o
+.PHONY : srcs/validate_args.c.o
+
+srcs/validate_args.i: srcs/validate_args.c.i
+
+.PHONY : srcs/validate_args.i
+
+# target to preprocess a source file
+srcs/validate_args.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/validate_args.c.i
+.PHONY : srcs/validate_args.c.i
+
+srcs/validate_args.s: srcs/validate_args.c.s
+
+.PHONY : srcs/validate_args.s
+
+# target to generate assembly for a file
+srcs/validate_args.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/srcs/validate_args.c.s
+.PHONY : srcs/validate_args.c.s
 
 srcs/zjmp.o: srcs/zjmp.c.o
 
@@ -3503,6 +3665,9 @@ help:
 	@echo "... srcs/cycles_to_die_check.o"
 	@echo "... srcs/cycles_to_die_check.i"
 	@echo "... srcs/cycles_to_die_check.s"
+	@echo "... srcs/error.o"
+	@echo "... srcs/error.i"
+	@echo "... srcs/error.s"
 	@echo "... srcs/fork.o"
 	@echo "... srcs/fork.i"
 	@echo "... srcs/fork.s"
@@ -3512,6 +3677,12 @@ help:
 	@echo "... srcs/handle_value.o"
 	@echo "... srcs/handle_value.i"
 	@echo "... srcs/handle_value.s"
+	@echo "... srcs/init_carriage.o"
+	@echo "... srcs/init_carriage.i"
+	@echo "... srcs/init_carriage.s"
+	@echo "... srcs/is_invalid_arg.o"
+	@echo "... srcs/is_invalid_arg.i"
+	@echo "... srcs/is_invalid_arg.s"
 	@echo "... srcs/ld.o"
 	@echo "... srcs/ld.i"
 	@echo "... srcs/ld.s"
@@ -3524,21 +3695,30 @@ help:
 	@echo "... srcs/op.o"
 	@echo "... srcs/op.i"
 	@echo "... srcs/op.s"
-	@echo "... srcs/operations.o"
-	@echo "... srcs/operations.i"
-	@echo "... srcs/operations.s"
 	@echo "... srcs/parse_arguments.o"
 	@echo "... srcs/parse_arguments.i"
 	@echo "... srcs/parse_arguments.s"
+	@echo "... srcs/parse_champion_parts.o"
+	@echo "... srcs/parse_champion_parts.i"
+	@echo "... srcs/parse_champion_parts.s"
 	@echo "... srcs/parse_champions.o"
 	@echo "... srcs/parse_champions.i"
 	@echo "... srcs/parse_champions.s"
+	@echo "... srcs/parse_flags.o"
+	@echo "... srcs/parse_flags.i"
+	@echo "... srcs/parse_flags.s"
 	@echo "... srcs/print.o"
 	@echo "... srcs/print.i"
 	@echo "... srcs/print.s"
+	@echo "... srcs/set_operation_code.o"
+	@echo "... srcs/set_operation_code.i"
+	@echo "... srcs/set_operation_code.s"
 	@echo "... srcs/st.o"
 	@echo "... srcs/st.i"
 	@echo "... srcs/st.s"
+	@echo "... srcs/validate_args.o"
+	@echo "... srcs/validate_args.i"
+	@echo "... srcs/validate_args.s"
 	@echo "... srcs/zjmp.o"
 	@echo "... srcs/zjmp.i"
 	@echo "... srcs/zjmp.s"

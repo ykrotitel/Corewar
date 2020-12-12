@@ -1,5 +1,5 @@
 #!/bin/bash
-gcc srcs/*.c -I includes/ -I ft_printf/libft/ -I ft_printf -L ft_printf/ -lftprintf
+gcc srcs/*.c srcs/visual/*.c -I includes/ -I ft_printf/libft/ -I ft_printf -L ft_printf/ -lftprintf -lpanel -lncurses
 ./a.out -h 6 champs/jumper.cor champs/ex.cor champs/maxidef.cor champs/examples/fluttershy.cor | head -$1 > t1
 #./a.out champs/jumper.cor champs/ex.cor champs/maxidef.cor champs/examples/fluttershy.cor -dump 13504 | tail -n 100 > t1
 ./corewar -v 6 champs/jumper.cor champs/ex.cor champs/maxidef.cor champs/examples/fluttershy.cor | head -$1 > t2

@@ -6,13 +6,13 @@
 /*   By: acarlett <acarlett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 23:30:54 by acarlett          #+#    #+#             */
-/*   Updated: 2020/12/09 19:46:52 by acarlett         ###   ########.fr       */
+/*   Updated: 2020/12/12 16:56:11 by acarlett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/corewar_visual.h"
 
-void		init_ncurses(t_data *data, t_visual *visual,
+void		init_ncurses(t_visual *visual,
 												struct winsize *win_size)
 {
 	initscr();

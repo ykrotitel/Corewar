@@ -400,6 +400,9 @@
 		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/cycles_to_die_check.c">
 			<Option target="corewar"/>
 		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/error.c">
+			<Option target="corewar"/>
+		</Unit>
 		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/fork.c">
 			<Option target="corewar"/>
 		</Unit>
@@ -407,6 +410,12 @@
 			<Option target="corewar"/>
 		</Unit>
 		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/handle_value.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/init_carriage.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/is_invalid_arg.c">
 			<Option target="corewar"/>
 		</Unit>
 		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/ld.c">
@@ -421,19 +430,28 @@
 		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/op.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/operations.c">
+		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/parse_arguments.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/parse_arguments.c">
+		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/parse_champion_parts.c">
 			<Option target="corewar"/>
 		</Unit>
 		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/parse_champions.c">
 			<Option target="corewar"/>
 		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/parse_flags.c">
+			<Option target="corewar"/>
+		</Unit>
 		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/print.c">
 			<Option target="corewar"/>
 		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/set_operation_code.c">
+			<Option target="corewar"/>
+		</Unit>
 		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/st.c">
+			<Option target="corewar"/>
+		</Unit>
+		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/validate_args.c">
 			<Option target="corewar"/>
 		</Unit>
 		<Unit filename="/Users/lmittie/Desktop/corewar/srcs/zjmp.c">

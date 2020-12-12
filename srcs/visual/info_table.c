@@ -6,7 +6,7 @@
 /*   By: acarlett <acarlett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 19:33:49 by acarlett          #+#    #+#             */
-/*   Updated: 2020/12/09 19:48:38 by acarlett         ###   ########.fr       */
+/*   Updated: 2020/12/12 16:58:36 by acarlett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,22 +41,12 @@ void		show_carriage_members(t_data *data, WINDOW *info_win, int i)
 		wprintw(info_win, "%c", data->champs[i].header.prog_name[j++]);
 	wattroff(info_win, COLOR_PAIR(i + 1));
 	wprintw(info_win, "\n\n");
-	wattron(info_win, COLOR_PAIR(6));
-	wprintw(info_win, "\tLives in current period:      ");
-	wattron(info_win, COLOR_PAIR(5));
-	wprintw(info_win, "133");
 	wprintw(info_win, "\n\n");
-	wattron(info_win, COLOR_PAIR(6));
-	wprintw(info_win, "\tLast live:                    ");
-	wattron(info_win, COLOR_PAIR(5));
-	wprintw(info_win, "1333");
-	wprintw(info_win, "\n\n\n");
 }
 
 void		make_info_table(t_data *data, WINDOW *info_win)
 {
 	int i;
-	int j;
 
 	i = -1;
 	wmove(info_win, 3, 2);

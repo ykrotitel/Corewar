@@ -6,13 +6,13 @@
 /*   By: acarlett <acarlett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 19:13:47 by acarlett          #+#    #+#             */
-/*   Updated: 2020/12/11 18:04:01 by acarlett         ###   ########.fr       */
+/*   Updated: 2020/12/12 17:03:52 by acarlett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/corewar_visual.h"
 
-void		show_arena(t_data *data, t_visual visual, int *button)
+void		show_arena(t_data *data, t_visual visual)
 {
 	make_color_pair();
 	make_arena(data, visual.wins.arena_win, &visual);
@@ -20,7 +20,7 @@ void		show_arena(t_data *data, t_visual visual, int *button)
 	refresh();
 	wrefresh(visual.wins.arena_win);
 	wrefresh(visual.wins.info_win);
-	// delay_output(50);
+	delay_output(25);
 }
 
 void		set_color_on(t_data *data, int i,
@@ -44,7 +44,8 @@ void		set_color_off(t_data *data, int i,
 void		handle_count_champs(t_data *data, int *code_size,
 							int *count_champs, WINDOW *arena_win)
 {
-	if (*code_size == data->champs[*count_champs].header.prog_size)
+	if ((unsigned int)*code_size ==
+	data->champs[*count_champs].header.prog_size)
 	{
 		wattroff(arena_win, COLOR_PAIR(*count_champs + 1));
 		*code_size = 0;
